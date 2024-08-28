@@ -31,15 +31,14 @@ The Poem Generator app is a React-based application that generates poems based o
 - Node.js and npm
 - Python and Flask
 
+## Installation
+
 **Clone the repository:**
 
-    ```bash
-    git clone https://github.com/samhithaa26/new.git
-    ```
-    
-    ```bash
-    cd new
-    ``` 
+```bash
+git clone https://github.com/samhithaa26/new.git
+cd new
+ 
 ### Backend Setup
 1. **Install Python dependencies:**
 
