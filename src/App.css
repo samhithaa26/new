@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.app-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.dynamic-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, #FFC0CB, #FFDAB9, #FF1493, #FAD02E, #FF4500, #87CEFA);
+    background-size: 800% 800%;
+    animation: gradientAnimation 15s ease infinite;
+    z-index: -1;
+    transition: background 1s ease;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.content-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: "Abril Fatface", serif;
+    font-weight: 800;
+    color: #000000;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 2px solid #FAD02E;
+    border-radius: 10px;
+    background: #FFF7E6;
+    text-align: center;
+    min-width: 250px;
+}
+
+.button {
+    background-color: #7a2e1e;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #000000;
+}
+
+.poem {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #333;
+    white-space: pre-wrap;
+    position: relative;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    max-width: 80vw;
+    font-family: 'Pacifico', serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.emoji {
+    position: absolute;
+    font-size: 2rem;
+    z-index: -3; /* Ensure emojis are behind GIFs */
+    animation: float 10s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0;
+    }
+}
+
+.audio-controls {
+    margin-top: 10px;
+}
+
+.audio-button {
+    background-color: #7a2e1e;
+    border: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio-button:hover {
+    background-color: #000000;
+}
+
+.audio-button.pause {
+    padding: 10px 8px;
+}
+
+.additional-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -3;
+    transition: background 1s ease;
+    animation: moveBackground 20s linear infinite;
+    background-size: 400% 400% !important;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Generic animation class for all emotions */
+.animated-background {
+    animation: commonMove 18s ease infinite;
+}
+
+/* Apply this class to all specific emotion backgrounds */
+.happy-additional,
+.sad-additional,
+.fear-additional,
+.anger-additional,
+.disgust-additional,
+.surprise-additional,
+.love-additional {
+    animation: commonMove 18s ease infinite;
+}
+
+/* Common keyframe animation for all emotions */
+@keyframes commonMove {
+    0% { background-position: 0% 0%; }
+    33% { background-position: 100% 0%; }
+    66% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
