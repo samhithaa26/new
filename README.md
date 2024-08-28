@@ -36,7 +36,7 @@ The Poem Generator app is a React-based application that generates poems based o
 1. **Clone the repository:**
 
     ```bash
-    git clone 
+    git clone https://github.com/samhithaa26/new.git
     cd poem-generator-app
     ```
 
