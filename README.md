@@ -31,6 +31,29 @@ The Poem Generator app is a React-based application that generates poems based o
 - Node.js and npm
 - Python and Flask
 
+### Backend Setup
+1. **Install Python dependencies:**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+    
+2. **Navigate to the backend directory:**
+
+    ```bash
+    cd backend
+    ```
+
+3. **Run the Flask server:**
+
+    ```bash
+    python train_model.py
+    python app.py
+    ```
+
+4. **Ensure the Flask server is running on `http://localhost:5000`.**
+
+   
 ### Frontend Setup
 
 1. **Clone the repository:**
@@ -53,28 +76,6 @@ The Poem Generator app is a React-based application that generates poems based o
     ```
 
 4. **Open `http://localhost:3000` in your browser.**
-
-### Backend Setup
-
-1. **Navigate to the backend directory:**
-
-    ```bash
-    cd backend
-    ```
-
-2. **Install Python dependencies:**
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. **Run the Flask server:**
-
-    ```bash
-    python app.py
-    ```
-
-4. **Ensure the Flask server is running on `http://localhost:5000`.**
 
 ## Code Structure
 
@@ -99,9 +100,6 @@ The Poem Generator app is a React-based application that generates poems based o
 
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
