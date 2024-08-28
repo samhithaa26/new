@@ -35,9 +35,10 @@ The Poem Generator app is a React-based application that generates poems based o
 
     ```bash
     git clone https://github.com/samhithaa26/new.git
+    ```   
+     ```bash
     cd new
-    ```
-    
+     ```  
 ### Backend Setup
 1. **Install Python dependencies:**
 
@@ -55,10 +56,11 @@ The Poem Generator app is a React-based application that generates poems based o
 
     ```bash
     python train_model.py
+    ```
+    ```bash
     python app.py
     ```
-
-4. **Ensure the Flask server is running on `http://localhost:5000`.**
+5. **Ensure the Flask server is running on `http://localhost:5000`.**
 
    
 ### Frontend Setup
